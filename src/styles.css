@@ -1,1 +1,296 @@
 /* You can add global styles to this file, and also import other style files */
+/*Generales*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: 20px;
+    background: url('./assets/img/ext.jpg');
+    background-attachment: fixed;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+/*Header*/
+header {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background: rgba(53, 103, 164, .8);
+    text-transform: uppercase;
+    position: fixed; 
+    text-align: center;
+}
+
+header ul {
+    display: block;
+    min-width: min-content;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header a {
+    text-decoration: none;
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    color: white;
+    transition: all 300ms;
+    margin-top: -3px;
+}
+
+header a:hover, 
+.actived {
+    background: rgba(0, 0, 0, .3);
+}
+
+/*Logotipo*/
+
+#logo {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 500ms, transform 500ms; 
+}
+
+
+
+header #logo:hover {
+    transform: scale(1.5, 1.5);
+    background: transparent;
+    color: black;
+}
+
+/*contenedor principal*/
+
+#content {
+    min-height: 600px;
+    height: auto;
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 0 40px black;
+    background: rgba(255, 255, 255, .7);
+    padding-top: 120px;
+    overflow: auto;
+}
+
+
+/*footer*/
+
+footer {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 15px;
+    color: rgba(0, 0, 0, .5)
+}
+
+/*sobre mi*/
+
+#title {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+#title h1 {
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#title h2 {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+article.about {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.about h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+}
+
+.about p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/*Seccion Formulario*/
+.container {
+    padding: 50px;
+    padding-top: 10px;
+
+}
+
+.container .image{
+    float: left;
+    width: 49%;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .data {
+    float: left;
+    width: 45%;
+    margin-left: 30px;
+}
+
+.container h2 {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form {
+    width: 80%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 40%;
+    padding: 5px;
+}
+
+form button, 
+form input[type="submit"],
+.btn-edit,
+.btn-delete {
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background:  rgb(53, 103, 164);
+    border: 1px solid rgb(17, 64, 121);
+    cursor: pointer;
+}
+
+.btn-edit,
+.btn-delete {
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: orange
+}
+
+.btn-delete {
+    background-color: red
+}
+
+form input[disabled] {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+form button:hover, 
+form input[type="submit"]:hover {
+    background:  rgba(53, 103, 164, .8);
+    border: 1px solid rgb(17, 64, 121);
+}
+
+.form_error {
+    font-size: 13px;
+    padding: 2px;
+    background: red;
+    color: white;
+    margin: 5px;
+}
+
+.message {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.success {
+    background-color: greenyellow;
+    color: white;
+}
+
+.success a {
+    color: white;
+}
+
+.failed {
+    background-color: red;
+    color: white;
+}
+
+/*pagina de projectos*/
+
+.project {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+
+}
+
+.project a {
+    text-decoration: none;
+    color: black;
+}
+
+.confirm {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
